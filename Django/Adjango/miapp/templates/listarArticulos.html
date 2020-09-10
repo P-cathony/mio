@@ -1,0 +1,85 @@
+<!-- trayendo el codigo de layout.html  -->
+{% extends 'layout.html' %}
+
+<!-- cargando filtros -->
+{% load filters %}
+
+<!-- insertando titulo en layout  -->
+{% block title %}
+    Lista de articulos
+{% endblock %}
+
+ 
+
+{% block content %}
+
+
+
+    <h1>Listar Articulos</h1><br>
+
+    
+
+    
+    <!-- cometarios -->
+    {% comment %} mostrando el mensaje flash {% endcomment %}
+    
+    {% if messages %}
+        {% for message in messages %}
+
+        
+            <div class="message">
+                {{ message }}
+            </div><br>cc
+          
+        {% endfor %}
+    {% endif %}
+
+
+
+
+
+    
+       
+        
+            
+            {% for articulo in articulos %}
+            
+                <article class="article-item">
+                	
+                    {% if articulo.img != 'null' and articulo.img.url|length >= 1 %}
+                        
+                    
+                        <div class="image">
+                            <img src="{{articulo.img.url}}" alt="imagen articulo">
+                        </div>
+                    
+                    
+                    {% endif %}
+            
+                   
+                    
+                    <div class="data">
+                        <h2> {{ articulo.title }} </h2>
+                        <span class="date">{{ articulo.created }}</span>
+                        
+                        <p>
+                            
+                            {{ articulo.content }}
+                            <br>
+                            <a href="{% url 'eliminar_articulo' articulo.id %}" class="btn btn-delete">Eliminar</a>
+    
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </article><br>
+                
+                
+    
+            {% endfor %}
+        
+        
+
+{% endblock %}
+
+ 
+

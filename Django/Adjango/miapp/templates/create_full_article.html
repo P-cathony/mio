@@ -1,0 +1,57 @@
+<!-- trayendo el codigo de layout.html  -->
+{% extends 'layout.html' %}
+
+<!-- cargando filtros -->
+{% load filters %}
+
+<!-- insertando titulo en layout  -->
+{% block title %}
+    Formularios en Django
+{% endblock %}
+
+ 
+
+{% block content %}
+<h1 class="title">
+    Formularios en Django con la clase Form
+</h1>
+
+
+
+
+
+
+{% if formulario.errors %}
+    <strong class="rojo">
+        Hay Errores en el Formulario
+        
+    </strong>
+{% endif %}
+
+
+
+
+<!-- cometarios -->
+{% comment %} Creando formulaario {% endcomment %}
+<form action="" method="POST">
+
+
+
+
+    {% csrf_token %}
+
+    <!-- cometarios -->
+    {% comment %} fomulario.as_p , fomulario.as_ul {% endcomment %}
+    
+    {{ formulario.as_p }}
+
+    <input type="submit" value="Guardar">
+
+</form>
+
+
+
+{% endblock %}
+
+ 
+

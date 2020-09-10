@@ -1,0 +1,31 @@
+<!-- trayendo el codigo de layout.html  -->
+{% extends 'layout.html' %}
+
+<!-- cargando filtros -->
+{% load filters %}
+
+<!-- insertando titulo en layout  -->
+{% block title %}
+    Pagina de pruebas
+{% endblock %}
+
+ 
+
+{% block content %}
+<h1 class="title">
+    página de mi web.
+</h1>
+
+<p>
+    {{ 'creado por william agudelo ññ'|cut:'ñ' }}
+</p>
+
+
+<!-- cometarios -->
+{% comment %} {{ ' willia'|saludo|safe }} {% endcomment %}
+
+
+{% endblock %}
+
+ 
+

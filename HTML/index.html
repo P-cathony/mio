@@ -1,0 +1,169 @@
+<!-- extensiones para hmtml:
+Image Preview, 
+Close HTML/XML tag, 
+HTMLHint,
+CSScomb. -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web prueba</title>
+</head>
+
+<body>
+
+    <h1>Lorem Ipsum</h1>
+    <!--titulo 1-->
+    <h2>What is Lorem Ipsum?</h2>
+    <!--titulo 2-->
+
+    <!-- Etiquetas de texto -->
+    <!-- parrafo -->
+    <p>
+       Lorem Ipsum is simply dummy text of the printing and 
+       typesetting industry. Lorem Ipsum has been the 
+       industry's standard dummy text ever since the 1500s, 
+       when an unknown printer took a galley of type and 
+       scrambled it to make a type specimen book. <br> <!-- Hacer enter en el texto -->
+       It has survived not only five centuries, but also the leap 
+       into electronic typesetting, remaining essentially 
+       unchanged. <br> It was popularised in the 1960s with the 
+       release of Letraset sheets containing Lorem Ipsum 
+       passages, and more recently with desktop publishing 
+       software like Aldus PageMaker including versions of 
+       <i> Lorem Ipsum.</i> <!-- texto en cursiva -->
+    </p> 
+
+
+
+  
+
+    <hr> <!-- Hacemos una separacion con una linea en el texto -->
+    <h3>tercer encabezado</h3>
+
+
+        
+    <p>
+        <strong>Lorem Ipsum is simply dummy text</strong> <!-- texto en negrilla -->
+        of the printing and typesetting industry. <em> <!-- texto en cursiva -->
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</em>
+        when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. 
+        <blockquote> <!-- texto en una cita -->
+        It has survived not only five centuries, but also the leap
+        into electronic typesetting, <span id="resultado" class="rojo"> <!-- manejar estilos css -->
+        remaining essentially unchanged. </span> </blockquote>
+    </p>
+
+
+
+    
+    <hr>
+
+         <!-- Imagenes -->
+     <h2>Imagenes</h2>
+        <img src="imagenes\shinigami.jpg" 
+        alt="Este es un shinigami" 
+        title="foto shinigami"
+        width="455"
+        height=""
+        > <!-- alt = muestra un texto cuando no se carga la imagen, cuando se pasa el cursor por encima muestra el titulo, -->
+
+    <hr>
+    
+
+
+    <!-- Tablas -->
+    <h3>Tablas</h3>
+
+    <table border="1">
+
+        <tr><!-- Filas -->
+            <th>Nombre</th><!-- Negrilla encabezado columnas -->
+            <th>Apellidos</th>
+            <th>Pais</th>
+        </tr>
+        <tr><!-- Filas -->
+            <td>Toni</td><!-- columnas -->
+            <td>Agudelo</td>
+            <td>Colombia</td>
+        </tr>
+        <tr><!-- Filas -->
+            <td>Mandy</td><!-- columnas -->
+            <td colspan="2">Perez</td><!-- colspan expandir columnas -->
+        </tr>
+
+    </table>
+
+
+       
+    <hr>
+    <!-- Listas -->
+
+    <h3>Listado de frutas</h3>
+    <!-- Listas ordenadas -->
+    <ol>
+        <li>Manzana
+            <ol>
+                <li>Roja</li>
+                <li>Verde</li>
+            </ol>
+        </li>
+        <li>Naranja</li>
+        <li>Pera</li>
+        <li>Sandia</li>
+    </ol>
+
+     <!-- Listas desordenadas -->
+     <ul>
+        <li>Manzana</li>
+        <li>Naranja</li>
+        <li>Pera</li>
+        <li>Sandia</li>
+     </ul>
+
+
+     <!-- Formulario -->
+     <h3>Formularios</h3>
+
+     <form action="" method="">
+        <p>     <!-- Campo nombre -->
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" placeholder="Escribe tu nombre">
+        </p>
+        
+        <p>     <!-- Campo description -->
+            <label for="description">Description</label>
+            <textarea name="description" id="" cols="30" rows="10"></textarea>
+        </p>
+
+         <!-- Radio button -->
+        <input type="radio" name="genero" id="" value="hombre"> Hombre <br>
+        <input type="radio" name="genero" id="" value="mujer"> Mujer <br>
+        <input type="radio" name="genero" id="" value="nada"> Nada <br>
+        
+        <br>
+
+        <!-- Select button -->
+        <select name="genero2" id="">
+
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+            <option value="nada">Nada</option>
+
+        </select>
+
+            <!-- button -->
+        <input type="submit" value="Enviar formulario">
+        
+
+
+    </form>
+
+
+</body>
+
+</html>

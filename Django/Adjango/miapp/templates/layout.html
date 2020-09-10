@@ -1,0 +1,114 @@
+<!-- para que layout funcione como plantilla hay que dividir el archivo en bloques  -->
+<!-- esto se hace para poder tener esta plantilla y traer contenido de otros templates. -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- titulo de cada pagina  -->
+    <title>
+        {% block title %}
+        {% endblock %} | sitio web con Django
+    </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+
+
+
+<body>
+
+
+
+    <!-- cabecera de la pagina -->
+    <header>
+        <div id="logotipo">
+            <img src="{% static 'images/logo.png' %}" alt="logo de pagina">
+
+            <h1>Sitio web con Django</h1>
+        </div>
+    </header>
+
+
+
+
+
+
+
+    <!-- menu de pagina -->
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url 'inicio' %}">Inicio</a>
+            </li>
+            <li>
+                <a href="{% url 'listar_articulos' %}">Listar Articulos</a>
+            </li>
+            <li>
+                <a href="{% url 'create_article' %}">Crear Articulo</a>
+            </li>
+            <li>
+                <a href="{% url 'create_full_article' %}">Crear Articulo 2</a>
+            </li>
+            <li>
+                <a href="{% url 'hola_mundo' %}">Hola mundo</a>
+            </li>
+            <li>
+                <a href="{% url 'pagina-pruebas' %}">Pagina pruebas</a>
+            </li>
+            <li>        
+                <a href="{% url 'contacto' %}">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- efecto 3D 3n la barra  -->
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+
+    </div>
+
+
+
+
+
+    <!-- contenido de la pagina -->
+    <div id="content">
+       
+        <div class="box">
+
+            <!-- <h2 class="title">Titulo Prueba</h2> -->
+
+            <!-- contenido de cada pagina  -->
+
+            {% block content %}
+
+            <strong> Contenido padre </strong> <!-- este contenido base se mostrara siempre y cuando se invoque -->
+
+            {% endblock %}
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- pie de paagina -->
+    <!-- <hr> -->
+    <footer>
+        Master en python &copy; Toni Agudelo - {% now 'd/m/y' %}
+    </footer>
+
+
+</body>
+
+</html>
